@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html lang="en" class="scroll-smooth"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kit Batina Financial Home Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#ea2a5a",
+                        "primary-content": "#ffffff",
+                        "primary-dark": "#c01b44",
+                        "background-light": "#fcf8f9",
+                        "background-dark": "#211115",
+                        "text-main": "#1b0e11",
+                        "text-muted": "#5e4a4f",
+                        "accent-surface": "#f3e7ea",
+                        "border-subtle": "#e7d0d5"
+                    },
+                    fontFamily: {
+                        display: ["Manrope", "sans-serif"],
+                        body: ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light text-text-main font-body antialiased selection:bg-primary selection:text-white pt-16">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Navbar -->
+<header class="fixed top-0 left-0 right-0 z-50 w-full border-b border-border-subtle bg-background-light/95 backdrop-blur-sm">
+<div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-3">
+<div class="flex h-8 w-8 items-center justify-center rounded bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-2xl">savings</span>
+</div>
+<h2 class="font-display text-xl font-bold tracking-tight text-text-main">Kit Batina Financial</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-text-main hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium text-text-main hover:text-primary transition-colors" href="#about">About</a>
+<a class="text-sm font-medium text-text-main hover:text-primary transition-colors" href="#services">Services</a>
+<a class="text-sm font-medium text-text-main hover:text-primary transition-colors" href="contact.html">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex h-10 items-center justify-center rounded-lg bg-primary px-5 text-sm font-bold text-white transition-colors hover:bg-primary-dark shadow-sm">
+                        Schedule Consultation
+                    </button>
+<!-- Mobile Menu Button -->
+<button class="flex md:hidden h-10 w-10 items-center justify-center rounded-lg border border-border-subtle text-text-main hover:bg-accent-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<!-- Hero Section -->
+<div class="relative">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+<div class="relative overflow-hidden rounded-2xl bg-text-main shadow-xl">
+<div class="absolute inset-0 z-0">
+<div class="h-full w-full bg-cover bg-center object-cover opacity-60 mix-blend-overlay transition-opacity duration-500 hover:opacity-70" data-alt="Close up of comforting hands holding seniors hands" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCjzgZobPCtwDYKn6PjvdyMbmx7HcQJWjgbcWuhqJobdP5Z9LYlQe5lWBjg_t1rLzjW3u_w53J96M5JBLvpKaJcWx_o3GS0ZMpsTU8fXhG8EJmvvoukiHvg86ewhBkDYz9CNm4yWDKU13IIUrdDxL2N_wKlie6qkziupLUf1-GFS91TelCmhjgxl3rGE-CHAfin9ycT1qvj6KsHDhkxI9b4eS9FbxWo-fHNfJp4gQmw_8hH2QIwxLYkyvhCFQX6j7yXoTk0xGG2C9g');"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+</div>
+<div class="relative z-10 flex min-h-[500px] flex-col justify-center px-6 py-16 sm:px-12 lg:px-16 lg:max-w-3xl">
+<h1 class="font-display text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl mb-6 leading-tight">
+                                Preserving your legacy and securing your long-term care
+                            </h1>
+<p class="mb-8 text-lg font-medium text-white/90 sm:text-xl max-w-xl leading-relaxed">
+                                Expert financial planning for college, retirement, and long-term care needs tailored to your family's future.
+                            </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="h-12 rounded-lg bg-primary px-8 text-base font-bold text-white shadow-lg transition-all hover:bg-primary-dark hover:shadow-primary/30">
+                                    Schedule Your Free Consultation
+                                </button>
+<a class="h-12 rounded-lg bg-white/10 px-8 text-base font-bold text-white backdrop-blur-sm border border-white/20 transition-all hover:bg-white/20 inline-flex items-center justify-center" href="#services">
+                                    View Services
+                                </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- About Section -->
+<section class="py-16 bg-white border-y border-border-subtle/30" id="about">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+<div class="flex flex-col justify-center order-2 lg:order-1">
+<div class="flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-wider mb-3">
+<span class="w-8 h-[2px] bg-primary"></span>
+                                About Kit Batina
+                            </div>
+<h2 class="font-display text-3xl font-bold tracking-tight text-text-main sm:text-4xl mb-6">
+                                A Unique Perspective on Financial Planning
+                            </h2>
+<p class="text-lg text-text-muted leading-relaxed mb-6">
+                                Kit Batina holds a master’s degree in Health Services Management &amp; Policy from George Washington University in Washington, DC and a bachelor’s degree in Economics from UC San Diego. As a former nursing home administrator, she has witnessed the financial devastation of long term care expenses and has dealt with this issue in her personal life with her own family. She has worked politically with Senate committees and healthcare advocacy groups in Washington, DC regarding elder care/aging issues and universal healthcare. She is committed to educating people about little-known options to preserve their money from the exorbitant cost of long term care. Contrary to popular opinion, one need not spend down to the Medicaid limits to qualify for Medicaid for home care, assisted living or nursing home care.
+                            </p>
+<p class="text-lg text-text-muted leading-relaxed mb-6">
+                                Kit Batina is a financial services representative specializing in college planning, retirement and long term care planning. These services go hand-in-hand as many people forgo retirement planning in order to fund college expenses for their children. In addition, even the best retirement plan can be upended in the event long-term care is needed. There are strategies that offer solutions to these concerns balancing all three while providing the best possible retirement ensuring your money lasts longer than you do.
+                            </p>
+<p class="text-lg text-text-muted leading-relaxed mb-8">
+                                All consultations are free of charge and individually designed with your specific needs and goals in mind.
+                            </p>
+<div class="flex items-center gap-4 pt-4">
+<button class="group inline-flex items-center gap-2 text-primary font-bold hover:text-primary-dark">
+                                    Read More About Kit
+                                    <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="relative order-1 lg:order-2">
+<div class="absolute -inset-4 bg-accent-surface rounded-2xl rotate-2 opacity-50"></div>
+<div class="relative aspect-[4/5] w-full max-w-md mx-auto overflow-hidden rounded-xl shadow-lg bg-background-light">
+<div class="h-full w-full bg-cover bg-center" data-alt="Professional headshot of a confident businesswoman in an office setting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB16NFbkWBkmLmpQgVlnLIkko6P6Rofk4oHKSmkYo7iExUz5KmH5UJqpbm-osR8HVodgpVLgxjzr2MSoAAXAXTXsSxHmjhsRrJFjA2OTnP0FnIjLB9-xioii8waB2tYLBiz2uCgs_pOtWgCyAzJsI27Fc7Tv7u20cI9lfA-l5N5vcWnMwZQ_WJ7_28C4SuAGdDtVwZhGyRsvcVsf6RgG0Y3mkaL7AviVoaTF857OR2jA9M3kL-pbaU2FGLBK37lvBM4ejVGiRzJWSs');"></div>
+<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white">
+<p class="font-display text-xl font-bold">Kit Batina</p>
+<p class="text-sm text-white/80">Former Nursing Home Administrator &amp; Financial Planner</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-20 bg-background-light" id="services">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div class="max-w-2xl">
+<h2 class="font-display text-3xl font-bold text-text-main sm:text-4xl mb-4">Our Services</h2>
+<p class="text-lg text-text-muted">Comprehensive financial strategies designed to navigate life's most critical transitions.</p>
+</div>
+<button class="hidden md:flex text-primary font-bold hover:text-primary-dark items-center gap-1">
+                            View All Services <span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+<!-- Service Card 1 -->
+<div class="group relative flex flex-col overflow-hidden rounded-2xl border border-border-subtle bg-white shadow-sm transition-all hover:shadow-md hover:-translate-y-1">
+<div class="p-8 flex flex-col h-full">
+<div class="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-accent-surface text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">school</span>
+</div>
+<h3 class="mb-2 font-display text-xl font-bold text-text-main">College Planning</h3>
+<div class="mb-6 flex items-baseline gap-1 text-primary">
+<span class="text-2xl font-black tracking-tight">Free</span>
+<span class="text-sm font-bold uppercase tracking-wide text-text-muted">Consultation</span>
+</div>
+<ul class="mb-8 flex flex-col gap-3 flex-grow">
+<li class="flex items-start gap-3 text-sm text-text-muted">
+<span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
+                                        Education savings strategies
+                                    </li>
+<li class="flex items-start gap-3 text-sm text-text-muted">
+<span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
+                                        529 plan selection
+                                    </li>
+<li class="flex items-start gap-3 text-sm text-text-muted">
+<span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
+                                        Financial aid optimization
+                                    </li>
+</ul>
+<button class="mt-auto w-full rounded-lg bg-accent-surface py-3 text-sm font-bold text-text-main transition-colors group-hover:bg-primary group-hover:text-white">
+                                    Learn More
+                                </button>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="group relative flex flex-col overflow-hidden rounded-2xl border border-border-subtle bg-white shadow-sm transition-all hover:shadow-md hover:-translate-y-1">
+<div class="p-8 flex flex-col h-full">
+<div class="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-accent-surface text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">account_balance</span>
+</div>
+<h3 class="mb-2 font-display text-xl font-bold text-text-main">Retirement Planning</h3>
+<div class="mb-6 flex items-baseline gap-1 text-primary">
+<span class="text-2xl font-black tracking-tight">Free</span>
+<span class="text-sm font-bold uppercase tracking-wide text-text-muted">Consultation</span>
+</div>
+<ul class="mb-8 flex flex-col gap-3 flex-grow">
+<li class="flex items-start gap-3 text-sm text-text-muted">
+<span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
+                                        Sustainable income planning
+                                    </li>
+<li class="flex items-start gap-3 text-sm text-text-muted">
+<span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
+                                        401(k) rollover guidance
+                                    </li>
+<li class="flex items-start gap-3 text-sm text-text-muted">
+<span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
+                                        Pension &amp; Social Security analysis
+                                    </li>
+</ul>
+<button class="mt-auto w-full rounded-lg bg-accent-surface py-3 text-sm font-bold text-text-main transition-colors group-hover:bg-primary group-hover:text-white">
+                                    Learn More
+                                </button>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="group relative flex flex-col overflow-hidden rounded-2xl border border-border-subtle bg-white shadow-sm transition-all hover:shadow-md hover:-translate-y-1">
+<div class="p-8 flex flex-col h-full">
+<div class="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-accent-surface text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">elderly</span>
+</div>
+<h3 class="mb-2 font-display text-xl font-bold text-text-main">Long-Term Care</h3>
+<div class="mb-6 flex items-baseline gap-1 text-primary">
+<span class="text-2xl font-black tracking-tight">Free</span>
+<span class="text-sm font-bold uppercase tracking-wide text-text-muted">Consultation</span>
+</div>
+<ul class="mb-8 flex flex-col gap-3 flex-grow">
+<li class="flex items-start gap-3 text-sm text-text-muted">
+<span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
+                                        Insurance option comparison
+                                    </li>
+<li class="flex items-start gap-3 text-sm text-text-muted">
+<span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
+                                        Asset protection strategies
+                                    </li>
+<li class="flex items-start gap-3 text-sm text-text-muted">
+<span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
+                                        Legacy &amp; Estate planning
+                                    </li>
+</ul>
+<button class="mt-auto w-full rounded-lg bg-accent-surface py-3 text-sm font-bold text-text-main transition-colors group-hover:bg-primary group-hover:text-white">
+                                    Learn More
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="relative overflow-hidden bg-text-main py-20">
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ea2a5a 1px, transparent 1px); background-size: 32px 32px;"></div>
+<div class="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+<h2 class="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl mb-6">
+                        Ready to secure your future?
+                    </h2>
+<p class="mx-auto max-w-2xl text-lg text-white/80 mb-10">
+                        Take the first step towards peace of mind. Schedule a complimentary consultation with Kit Batina today to discuss your unique needs.
+                    </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="h-12 min-w-[200px] rounded-lg bg-primary px-8 text-base font-bold text-white shadow-lg transition-all hover:bg-primary-dark hover:scale-105">
+                            Book Consultation
+                        </button>
+<button class="h-12 min-w-[200px] rounded-lg border border-white/20 bg-transparent px-8 text-base font-bold text-white transition-all hover:bg-white/10">
+                            Contact Us
+                        </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background-light border-t border-border-subtle pt-16 pb-8">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<div class="md:col-span-2">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">savings</span>
+<h2 class="font-display text-xl font-bold text-text-main">Kit Batina Financial</h2>
+</div>
+<p class="text-text-muted max-w-md mb-6">
+                            Helping families navigate the complexities of financial planning with compassion and expertise. Specializing in long-term care solutions.
+                        </p>
+<div class="flex gap-4">
+<a class="h-10 w-10 flex items-center justify-center rounded-full bg-white border border-border-subtle text-text-muted hover:text-primary hover:border-primary transition-colors" href="#">
+<span class="sr-only">Facebook</span>
+<svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="h-10 w-10 flex items-center justify-center rounded-full bg-white border border-border-subtle text-text-muted hover:text-primary hover:border-primary transition-colors" href="#">
+<span class="sr-only">LinkedIn</span>
+<svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" fill-rule="evenodd"></path></svg>
+</a>
+</div>
+</div>
+<div>
+<h3 class="font-bold text-text-main mb-4">Quick Links</h3>
+<ul class="space-y-3">
+<li><a class="text-text-muted hover:text-primary transition-colors" href="#">Home</a></li>
+<li><a class="text-text-muted hover:text-primary transition-colors" href="#">About Kit</a></li>
+<li><a class="text-text-muted hover:text-primary transition-colors" href="#">Services</a></li>
+<li><a class="text-text-muted hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-text-main mb-4">Contact</h3>
+<ul class="space-y-3">
+<li class="flex items-start gap-3 text-text-muted">
+<span class="material-symbols-outlined text-primary text-sm mt-1">location_on</span>
+                                123 Financial District,<br/>Suite 400<br/>Chicago, IL 60601
+                            </li>
+<li class="flex items-center gap-3 text-text-muted">
+<span class="material-symbols-outlined text-primary text-sm">phone</span>
+                                (555) 123-4567
+                            </li>
+<li class="flex items-center gap-3 text-text-muted">
+<span class="material-symbols-outlined text-primary text-sm">mail</span>
+                                kit@example.com
+                            </li>
+</ul>
+</div>
+</div>
+<div class="border-t border-border-subtle pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-text-muted/70">
+<p>© 2023 Kit Batina Financial. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-text-main" href="#">Privacy Policy</a>
+<a class="hover:text-text-main" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

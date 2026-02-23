@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html lang="en" class="scroll-smooth"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact | Kit Batina Financial</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#ea2a5a",
+                        "primary-content": "#ffffff",
+                        "primary-dark": "#c01b44",
+                        "background-light": "#fcf8f9",
+                        "background-dark": "#211115",
+                        "text-main": "#1b0e11",
+                        "text-muted": "#5e4a4f",
+                        "accent-surface": "#f3e7ea",
+                        "border-subtle": "#e7d0d5"
+                    },
+                    fontFamily: {
+                        display: ["Manrope", "sans-serif"],
+                        body: ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light text-text-main font-body antialiased selection:bg-primary selection:text-white pt-16">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<header class="fixed top-0 left-0 right-0 z-50 w-full border-b border-border-subtle bg-background-light/95 backdrop-blur-sm">
+<div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-3">
+<div class="flex h-8 w-8 items-center justify-center rounded bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-2xl">savings</span>
+</div>
+<h2 class="font-display text-xl font-bold tracking-tight text-text-main">Kit Batina Financial</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-text-main hover:text-primary transition-colors" href="index.html">Home</a>
+<a class="text-sm font-medium text-text-main hover:text-primary transition-colors" href="index.html#about">About</a>
+<a class="text-sm font-medium text-text-main hover:text-primary transition-colors" href="index.html#services">Services</a>
+<a class="text-sm font-medium text-text-main hover:text-primary transition-colors" href="contact.html">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex h-10 items-center justify-center rounded-lg bg-primary px-5 text-sm font-bold text-white transition-colors hover:bg-primary-dark shadow-sm">
+                        Schedule Consultation
+                    </button>
+<button class="flex md:hidden h-10 w-10 items-center justify-center rounded-lg border border-border-subtle text-text-main hover:bg-accent-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<section class="bg-white border-b border-border-subtle/30">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+<div class="max-w-3xl">
+<p class="text-sm font-bold uppercase tracking-wider text-primary mb-3">Get in Touch</p>
+<h1 class="font-display text-4xl font-extrabold tracking-tight text-text-main sm:text-5xl mb-4">
+                            Let’s plan your financial future together
+                        </h1>
+<p class="text-lg text-text-muted">
+                            Share your goals and questions. We’ll respond quickly and help you choose the right next steps.
+                        </p>
+</div>
+</div>
+</section>
+<section class="py-16 bg-background-light">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 gap-10 lg:grid-cols-3">
+<div class="lg:col-span-2">
+<div class="rounded-2xl border border-border-subtle bg-white p-8 shadow-sm">
+<h2 class="font-display text-2xl font-bold text-text-main mb-6">Send a Message</h2>
+<form class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-text-main" for="name">Full Name</label>
+<input class="h-12 rounded-lg border border-border-subtle px-4 text-sm focus:border-primary focus:ring-primary" id="name" name="name" placeholder="Your full name" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-text-main" for="email">Email Address</label>
+<input class="h-12 rounded-lg border border-border-subtle px-4 text-sm focus:border-primary focus:ring-primary" id="email" name="email" placeholder="you@email.com" type="email"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-text-main" for="phone">Phone Number</label>
+<input class="h-12 rounded-lg border border-border-subtle px-4 text-sm focus:border-primary focus:ring-primary" id="phone" name="phone" placeholder="(555) 123-4567" type="tel"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-text-main" for="topic">Topic</label>
+<select class="h-12 rounded-lg border border-border-subtle px-4 text-sm focus:border-primary focus:ring-primary" id="topic" name="topic">
+<option>Long-Term Care Planning</option>
+<option>Retirement Strategy</option>
+<option>College Planning</option>
+<option>General Inquiry</option>
+</select>
+</div>
+<div class="flex flex-col gap-2 sm:col-span-2">
+<label class="text-sm font-medium text-text-main" for="message">Message</label>
+<textarea class="min-h-[140px] rounded-lg border border-border-subtle px-4 py-3 text-sm focus:border-primary focus:ring-primary" id="message" name="message" placeholder="Tell us about your goals"></textarea>
+</div>
+<div class="sm:col-span-2">
+<button class="h-12 w-full rounded-lg bg-primary text-sm font-bold text-white transition-colors hover:bg-primary-dark">
+                                        Send Message
+                                    </button>
+</div>
+</form>
+</div>
+</div>
+<div class="space-y-6">
+<div class="rounded-2xl border border-border-subtle bg-white p-6 shadow-sm">
+<div class="flex items-center gap-3 text-primary mb-3">
+<span class="material-symbols-outlined text-2xl">call</span>
+<p class="text-sm font-bold uppercase tracking-wide">Phone</p>
+</div>
+<p class="text-lg font-semibold text-text-main">(555) 012-3456</p>
+<p class="text-sm text-text-muted">Mon–Fri, 9am–6pm</p>
+</div>
+<div class="rounded-2xl border border-border-subtle bg-white p-6 shadow-sm">
+<div class="flex items-center gap-3 text-primary mb-3">
+<span class="material-symbols-outlined text-2xl">mail</span>
+<p class="text-sm font-bold uppercase tracking-wide">Email</p>
+</div>
+<p class="text-lg font-semibold text-text-main">hello@kitbatina.com</p>
+<p class="text-sm text-text-muted">We reply within 1 business day</p>
+</div>
+<div class="rounded-2xl border border-border-subtle bg-white p-6 shadow-sm">
+<div class="flex items-center gap-3 text-primary mb-3">
+<span class="material-symbols-outlined text-2xl">location_on</span>
+<p class="text-sm font-bold uppercase tracking-wide">Office</p>
+</div>
+<p class="text-lg font-semibold text-text-main">123 Legacy Lane</p>
+<p class="text-sm text-text-muted">Springfield, IL 62704</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+</body></html>
