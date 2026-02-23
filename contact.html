@@ -39,16 +39,16 @@
         }
     </script>
 </head>
-<body class="bg-background-light text-text-main font-body antialiased selection:bg-primary selection:text-white pt-16">
+<body id="top" class="bg-background-light text-text-main font-body antialiased selection:bg-primary selection:text-white pt-16">
 <div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
 <header class="fixed top-0 left-0 right-0 z-50 w-full border-b border-border-subtle bg-background-light/95 backdrop-blur-sm">
 <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-<div class="flex items-center gap-3">
+<a class="flex items-center gap-3" href="index.html#top">
 <div class="flex h-8 w-8 items-center justify-center rounded bg-primary/10 text-primary">
 <span class="material-symbols-outlined text-2xl">savings</span>
 </div>
 <h2 class="font-display text-xl font-bold tracking-tight text-text-main">Kit Batina Financial</h2>
-</div>
+</a>
 <nav class="hidden md:flex items-center gap-8">
 <a class="text-sm font-medium text-text-main hover:text-primary transition-colors" href="index.html">Home</a>
 <a class="text-sm font-medium text-text-main hover:text-primary transition-colors" href="index.html#about">About</a>
@@ -56,15 +56,24 @@
 <a class="text-sm font-medium text-text-main hover:text-primary transition-colors" href="contact.html">Contact</a>
 </nav>
 <div class="flex items-center gap-4">
-<button class="hidden sm:flex h-10 items-center justify-center rounded-lg bg-primary px-5 text-sm font-bold text-white transition-colors hover:bg-primary-dark shadow-sm">
+<button class="hidden sm:flex h-10 items-center justify-center rounded-lg bg-primary px-5 text-sm font-bold text-white transition-colors hover:bg-primary-dark shadow-sm" data-action="consult">
                         Schedule Consultation
                     </button>
-<button class="flex md:hidden h-10 w-10 items-center justify-center rounded-lg border border-border-subtle text-text-main hover:bg-accent-surface">
+<button class="flex md:hidden h-10 w-10 items-center justify-center rounded-lg border border-border-subtle text-text-main hover:bg-accent-surface" data-mobile-toggle aria-expanded="false">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
 </div>
 </header>
+<div class="md:hidden hidden border-b border-border-subtle bg-background-light/95 backdrop-blur-sm" id="mobileMenu">
+<nav class="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-4">
+<a class="text-sm font-medium text-text-main hover:text-primary transition-colors" href="index.html#top">Home</a>
+<a class="text-sm font-medium text-text-main hover:text-primary transition-colors" href="index.html#about">About</a>
+<a class="text-sm font-medium text-text-main hover:text-primary transition-colors" href="index.html#services">Services</a>
+<a class="text-sm font-medium text-text-main hover:text-primary transition-colors" href="contact.html">Contact</a>
+<button class="h-10 rounded-lg bg-primary px-5 text-sm font-bold text-white transition-colors hover:bg-primary-dark shadow-sm" data-action="consult">Schedule Consultation</button>
+</nav>
+</div>
 <main class="flex-1">
 <section class="bg-white border-b border-border-subtle/30">
 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
@@ -85,7 +94,7 @@
 <div class="lg:col-span-2">
 <div class="rounded-2xl border border-border-subtle bg-white p-8 shadow-sm">
 <h2 class="font-display text-2xl font-bold text-text-main mb-6">Send a Message</h2>
-<form class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+<form class="grid grid-cols-1 gap-6 sm:grid-cols-2" id="contact-form" novalidate>
 <div class="flex flex-col gap-2">
 <label class="text-sm font-medium text-text-main" for="name">Full Name</label>
 <input class="h-12 rounded-lg border border-border-subtle px-4 text-sm focus:border-primary focus:ring-primary" id="name" name="name" placeholder="Your full name" type="text"/>
@@ -112,9 +121,12 @@
 <textarea class="min-h-[140px] rounded-lg border border-border-subtle px-4 py-3 text-sm focus:border-primary focus:ring-primary" id="message" name="message" placeholder="Tell us about your goals"></textarea>
 </div>
 <div class="sm:col-span-2">
-<button class="h-12 w-full rounded-lg bg-primary text-sm font-bold text-white transition-colors hover:bg-primary-dark">
+<button class="h-12 w-full rounded-lg bg-primary text-sm font-bold text-white transition-colors hover:bg-primary-dark" type="submit">
                                         Send Message
                                     </button>
+</div>
+<div class="sm:col-span-2">
+<p class="hidden text-sm font-medium" id="formStatus" aria-live="polite"></p>
 </div>
 </form>
 </div>
@@ -150,4 +162,131 @@
 </section>
 </main>
 </div>
+<script>
+        const mobileToggle = document.querySelector("[data-mobile-toggle]");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const mobileIcon = mobileToggle ? mobileToggle.querySelector(".material-symbols-outlined") : null;
+        const setMobileState = (isOpen) => {
+            if (!mobileMenu || !mobileToggle || !mobileIcon) return;
+            mobileMenu.classList.toggle("hidden", !isOpen);
+            mobileToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+            mobileIcon.textContent = isOpen ? "close" : "menu";
+        };
+        if (mobileToggle && mobileMenu) {
+            mobileToggle.addEventListener("click", () => {
+                const isOpen = mobileMenu.classList.contains("hidden");
+                setMobileState(isOpen);
+            });
+            mobileMenu.querySelectorAll("a, button").forEach((item) => {
+                item.addEventListener("click", () => setMobileState(false));
+            });
+        }
+
+        const contactForm = document.getElementById("contact-form");
+        const statusEl = document.getElementById("formStatus");
+        const fields = {
+            name: document.getElementById("name"),
+            email: document.getElementById("email"),
+            phone: document.getElementById("phone"),
+            topic: document.getElementById("topic"),
+            message: document.getElementById("message")
+        };
+        const submitButton = contactForm ? contactForm.querySelector("button[type='submit']") : null;
+
+        const setFieldError = (field, hasError) => {
+            field.classList.toggle("border-primary", hasError);
+            field.classList.toggle("ring-1", hasError);
+            field.classList.toggle("ring-primary/40", hasError);
+        };
+
+        const setStatus = (message, tone) => {
+            if (!statusEl) return;
+            statusEl.textContent = message;
+            statusEl.classList.remove("hidden", "text-primary", "text-text-main");
+            statusEl.classList.add(tone === "success" ? "text-primary" : "text-text-main");
+        };
+
+        const setLoading = (isLoading) => {
+            if (!submitButton) return;
+            if (!submitButton.dataset.originalText) {
+                submitButton.dataset.originalText = submitButton.textContent.trim();
+            }
+            if (isLoading) {
+                submitButton.textContent = "Sending...";
+                submitButton.disabled = true;
+                submitButton.classList.add("opacity-70", "cursor-not-allowed");
+            } else {
+                submitButton.textContent = submitButton.dataset.originalText;
+                submitButton.disabled = false;
+                submitButton.classList.remove("opacity-70", "cursor-not-allowed");
+            }
+        };
+
+        if (contactForm) {
+            contactForm.addEventListener("submit", (event) => {
+                event.preventDefault();
+                let hasError = false;
+                const nameValue = fields.name.value.trim();
+                const emailValue = fields.email.value.trim();
+                const phoneValue = fields.phone.value.trim();
+                const messageValue = fields.message.value.trim();
+
+                const emailValid = /.+@.+\..+/.test(emailValue);
+                const phoneValid = phoneValue.replace(/\D/g, "").length >= 7;
+
+                setFieldError(fields.name, !nameValue);
+                setFieldError(fields.email, !emailValid);
+                setFieldError(fields.phone, !phoneValid);
+                setFieldError(fields.message, !messageValue);
+
+                if (!nameValue || !emailValid || !phoneValid || !messageValue) {
+                    hasError = true;
+                }
+
+                if (hasError) {
+                    setStatus("Please complete the highlighted fields.", "error");
+                    return;
+                }
+
+                setStatus("Submitting your message...", "success");
+                setLoading(true);
+
+                const shouldFail = emailValue.toLowerCase().includes("fail") || messageValue.toLowerCase().includes("error");
+
+                setTimeout(() => {
+                    setLoading(false);
+                    if (shouldFail) {
+                        setStatus("We could not send your message. Please try again.", "error");
+                        return;
+                    }
+                    contactForm.reset();
+                    setStatus("Message sent successfully. We'll be in touch shortly.", "success");
+                }, 1200);
+            });
+        }
+
+        document.querySelectorAll("[data-action='consult']").forEach((button) => {
+            button.addEventListener("click", (event) => {
+                event.preventDefault();
+                const form = document.getElementById("contact-form");
+                if (form) {
+                    form.scrollIntoView({ behavior: "smooth" });
+                }
+            });
+        });
+
+        const params = new URLSearchParams(window.location.search);
+        const topic = params.get("topic");
+        if (topic && fields.topic) {
+            const options = Array.from(fields.topic.options);
+            const match = options.find((option) => option.textContent.trim() === topic);
+            if (match) {
+                fields.topic.value = match.value;
+            }
+            const form = document.getElementById("contact-form");
+            if (form) {
+                form.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    </script>
 </body></html>
